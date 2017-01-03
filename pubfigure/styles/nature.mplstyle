@@ -1,0 +1,61 @@
+# Style sheet for matplotlib to mimic a nature-publication like plot
+# TODO refer to nature publication
+
+# Basic line settings
+lines.linewidth : 0.5
+lines.antialiased : True
+lines.markersize  : 5
+
+
+# Font setting
+font.family : sans-serif
+font.style  : normal
+font.size   : 7
+font.weight : 400
+font.sans-serif : Whitney Book, Arial, Helvetica
+
+text.usetex : False
+mathtext.fontset : custom
+mathtext.rm : Minion Pro
+mathtext.it : Minion Pro:italic
+mathtext.bf : Minion Pro:bold
+mathtext.default : it
+
+
+
+# AXES
+axes.linewidth      : 0.25
+axes.titlesize      : medium
+axes.labelsize      : medium
+axes.labelpad       : 4
+axes.unicode_minus  : False	# The Whitney Book font has no unicode support
+
+# TICKS
+xtick.major.size     : 3.2      # major tick size in points
+xtick.minor.size     : 1.6      # minor tick size in points
+xtick.major.width    : 0.25    # major tick width in points
+xtick.minor.width    : 0.25    # minor tick width in points
+xtick.major.pad      : 3.2      # distance to major tick label in points
+xtick.minor.pad      : 1.6      # distance to the minor tick label in points
+xtick.color          : k      # color of the tick labels
+xtick.labelsize      : medium  # fontsize of the tick labels
+xtick.direction      : out     # direction: in, out, or inout
+
+ytick.major.size     : 3.2      # major tick size in points
+ytick.minor.size     : 1.6      # minor tick size in points
+ytick.major.width    : 0.25    # major tick width in points
+ytick.minor.width    : 0.25    # minor tick width in points
+ytick.major.pad      : 3.2    # distance to major tick label in points
+ytick.minor.pad      : 1.6      # distance to the minor tick label in points
+ytick.color          : k      # color of the tick labels
+ytick.labelsize      : medium # fontsize of the tick labels
+ytick.direction      : out
+
+#legend
+legend.frameon       : False    # no legend frome
+
+#Subplot settings
+figure.subplot.left    : 0.05  # the left side of the subplots of the figure
+figure.subplot.right   : 0.95    # the right side of the subplots of the figure
+figure.subplot.bottom  : 0.05    # the bottom of the subplots of the figure
+figure.subplot.top     : 0.95 

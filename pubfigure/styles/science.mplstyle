@@ -1,0 +1,51 @@
+# Style sheet for matplotlib to mimic a nature-publication like plot
+# TODO refer to nature publication
+
+# Basic line settings
+lines.linewidth : 0.85
+lines.antialiased : True
+lines.markersize  : 6.5
+
+
+# Font setting
+font.family : sans-serif
+font.style  : normal
+font.size   : 7.5
+font.weight : 500
+font.sans-serif : Helvetica, Arial
+
+text.usetex : False
+mathtext.fontset : custom
+mathtext.rm : Arial
+mathtext.it : Arial:italic
+mathtext.bf : Arial:bold
+mathtext.default : it
+
+
+# AXES
+axes.linewidth      : 0.85
+axes.titlesize      : medium
+axes.labelsize      : medium
+axes.labelpad       : 7
+
+# TICKS
+xtick.major.size     : 3.5      # major tick size in points
+xtick.minor.size     : 1.8      # minor tick size in points
+xtick.major.width    : 0.85    # major tick width in points
+xtick.minor.width    : 0.85    # minor tick width in points
+xtick.major.pad      : 3.5      # distance to major tick label in points
+xtick.minor.pad      : 1.8      # distance to the minor tick label in points
+xtick.color          : k      # color of the tick labels
+xtick.labelsize      : medium  # fontsize of the tick labels
+xtick.direction      : out     # direction: in, out, or inout
+
+ytick.major.size     : 3.5      # major tick size in points
+ytick.minor.size     : 1.8      # minor tick size in points
+ytick.major.width    : 0.85    # major tick width in points
+ytick.minor.width    : 0.85    # minor tick width in points
+ytick.major.pad      : 3.5    # distance to major tick label in points
+ytick.minor.pad      : 1.8      # distance to the minor tick label in points
+ytick.color          : k      # color of the tick labels
+ytick.labelsize      : medium # fontsize of the tick labels
+ytick.direction      : out
+

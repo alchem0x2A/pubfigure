@@ -1,0 +1,51 @@
+\documentclass[\VAR{font_size}pt, border=0 in]{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{xcolor}
+
+\setmainfont{\VAR{font_name_main}}
+
+\begin{document}
+\begin{tikzpicture}[x=1 in, y=-1 in]
+
+  \BLOCK{ for fig in fig_list }
+
+    \BLOCK{ if fig.outline == true }
+       \draw[opacity=0.8,
+             anchor=north west,]
+            (\VAR{ fig.fig_x|round(2) }, \VAR{ fig.fig_y|round(2)})
+            rectangle (\VAR{ (fig.fig_x+fig.fig_w)|round(2) }, \VAR{ (fig.fig_y+fig.fig_h)|round(2)});
+    \BLOCK{ endif }
+
+    \node[
+          \BLOCK{ if fig.outline == true }
+            draw, opacity=0.5,
+          \BLOCK{ endif }
+          inner sep=0, anchor=north west]
+         at (\VAR{fig.sub_x|round(2)}, \VAR{fig.sub_y|round(2)})
+    {
+        \includegraphics[width=\VAR{fig.sub_w|round(2)}in]{\VAR{fig.file_name}}
+    };
+    \BLOCK{ if fig.text is not none }
+    \node[
+         \BLOCK{ if fig.outline == true }
+           draw,
+         \BLOCK{ endif }
+         rectangle,
+        opacity=\VAR{fig.alpha},
+        inner sep=\VAR{(0.1*font_size)|round(2)}pt,
+        anchor=north west,
+        \BLOCK{ if fig.text_bc is not none }
+          fill=\VAR{fig.text_bc}
+        \BLOCK{ endif }
+        ]at (\VAR{fig.text_x|round(2)}, \VAR{fig.text_y|round(2)})
+      {
+          \textcolor{\VAR{fig.text_fc}}{\VAR{fig.text}}
+      };
+    \BLOCK{ endif }
+  \BLOCK{ endfor }
+
+\end{tikzpicture}
+\end{document}
+

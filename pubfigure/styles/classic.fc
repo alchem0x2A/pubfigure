@@ -1,0 +1,40 @@
+# Style sheet for FigureCollection
+
+# Page size for the FigureCollection, in inches 
+page.width : 8.0
+page.height : 6.0
+
+# TODO: add more engines
+engine : Tikz
+
+# Spacing of individual figures, assume that the blocks
+# reserved for each figure is close to each other.
+# The values are the relative value to the figure size
+
+# lpad and rpad are relative to the size of width of each figure
+figure.lpad : 0.1
+figure.rpad : 0.1
+
+# tpad and bpad are relative to the size of height of each figure
+figure.tpad : 0.1
+figure.bpad : 0.1
+
+# Annotation of each figure
+# Annotation styles are composed by the descriptor, eg. () or [],
+# and symbol, either alphabet or numeric.
+# e.g. ($A$) , $a$) or $1$
+annotation.style : ($a$)
+annotation.size : 8.5
+annotation.weight : bold
+
+# Foreground color of annotation,
+# either a valid colorname, or triple RGB indicator
+annotation.fc : black
+
+# Background color
+annotation.bc : None
+annotation.alpha : 1.0
+
+# Relative location of annotation compared with each figure
+# The center position of annotation compared with the LEFT-UP corners
+annotation.location : 0.1, 0.1
