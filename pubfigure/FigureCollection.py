@@ -453,7 +453,7 @@ class FigureCollection(object):
             else:
                 extension = os.path.splitext(fig_.fig)[-1]  # Nicer split of file extension
                 tmp_name = os.path.join(dir_tmp_name, format(i)+extension)
-            print(tmp_name)
+            # print(tmp_name)
             fig_.save_fig(tmp_name)
             self.figure_list[i].file_name = tmp_name
 
@@ -466,6 +466,8 @@ class FigureCollection(object):
         if export_tikz is True:
             # TODO: export tikz here
             pass
+
+        return filename
 
     def _export(self, dir_name, f_base, outline):
         """
@@ -523,11 +525,9 @@ class FigureCollection(object):
             # TODO: use tikz engine to generate!
             # Possible to be running the subprocess with different TeX
             # directory. Must define the absolute path!
-            subprocess.call(("latexmk",
-                             "-xelatex",
-                             "-pdf",
-                             "-output-directory=%s" % dir_name,
-                             file_tex))
+            subprocess.call(("latexmk", "-xelatex", "-pdf", "-f", "-quiet",
+                             "-output-directory=%s" % dir_name, file_tex),
+                             stdout=open(os.devnull, "w"))
 
 default_figure_param = {"figure.lpad": 0.1,
                         "figure.rpad": 0.1,
